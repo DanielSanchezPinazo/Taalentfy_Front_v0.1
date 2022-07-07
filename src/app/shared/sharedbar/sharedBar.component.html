@@ -1,0 +1,15 @@
+<form>
+  <div class="bg-dark" id="sidebar">
+    <h1 class="text-light">Taalentfy</h1>
+    <nav>
+      <select name="elementos" id="elementos" (change)="enrut()" [(ngModel)]="ruta">
+        <option value="candidato">Candidato</option>
+        <option value="empresa">Empresa</option>
+        <option value="oferta">Oferta</option>
+        <option value="candidatura">Candidatura</option>
+        <option value="admin">Administradores</option>
+      </select>
+    </nav>
+  </div>
+  <hr class="text-white" style="margin-top: 0px;"/>
+</form>

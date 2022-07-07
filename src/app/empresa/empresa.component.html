@@ -1,0 +1,36 @@
+<form >
+    <div class="row">
+      <div class="col" class="centrado">
+        <h3>CREAR / EDITAR EMPRESA</h3>
+        <label for="cif">CIF *:</label>
+        <input type="text" name="cif" id="cif" [(ngModel)]="formulario.CIF">
+        <hr class="separadorB">
+        <label for="nombre">Nombre *:</label>
+        <input type="text" name="nombre" id="nombre" [(ngModel)]="formulario.Nombre">
+        <hr class="separadorB">
+        <label for="descripcion">Descripción:</label>
+        <input type="text" name="descripcion" id="descripcion" [(ngModel)]="formulario.Descripcion">
+        <hr class="separadorB">
+        Obligatorio sólo si quieres modificar/borrar una empresa
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id" [(ngModel)]="id">
+      </div>
+      <div class="col" class="centrado">
+        <button (click)="nuevaEmpresa()">NUEVA</button>
+        <button (click)="editEmpresa()">EDITAR</button>
+        <button (click)="borrarEmpresa()">BORRAR</button>
+      </div>
+      <hr class="separadorF">
+    </div>
+  </form>
+  
+  <div class="centrado">
+    <h3 style="color: white;">LISTA DE EMPRESAS</h3>
+    <hr>
+    <ul *ngFor="let empresa of empresas" style="color: white;">
+      <li class="grid grid-pad">
+        ID: {{ empresa.Id }} -{{ empresa.CIF }} - {{ empresa.Nombre }} - {{ empresa.Descripcion }} 
+      </li>
+    </ul>
+  </div>
+  

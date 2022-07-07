@@ -1,0 +1,45 @@
+<form >
+  <div class="row">
+    <div class="col" class="centrado">
+      <h3>CREAR / EDITAR CANDIDATO</h3>
+      <label for="dni">DNI *:</label>
+      <input type="text" name="dni" id="dni" [(ngModel)]="formulario.Dni">
+      <hr class="separadorB">
+      <label for="nombre">Nombre *:</label>
+      <input type="text" name="nombre" id="nombre" [(ngModel)]="formulario.Nombre">
+      <hr class="separadorB">
+      <label for="titulo1">Título 1:</label>
+      <input type="text" name="titulo1" id="titulo1" [(ngModel)]="formulario.Titulo1">
+      <hr class="separadorB">
+      <label for="titulo2">Título 2:</label>
+      <input type="text" name="titulo2" id="titulo2" [(ngModel)]="formulario.Titulo2">
+      <hr class="separadorB">
+      <label for="aptitud1">Aptitud 1:</label>
+      <input type="text" name="aptitud1" id="aptitud1" [(ngModel)]="formulario.Aptitud1">
+      <hr class="separadorB">
+      <label for="aptitud2">Aptitud 2:</label>
+      <input type="text" name="aptitud2" id="aptitud2" [(ngModel)]="formulario.Aptitud2">
+      <hr class="separadorB">
+      Obligatorio sólo si quieres modificar/borrar un candidato
+      <label for="id">ID:</label>
+      <input type="text" name="id" id="id" [(ngModel)]="id">
+    </div>
+    <div class="col" class="centrado">
+      <button (click)="nuevoCandidato()">NUEVO</button>
+      <button (click)="editCandidato()">EDITAR</button>
+      <button (click)="borrarCandidato()">BORRAR</button>
+    </div>
+    <hr class="separadorF">
+  </div>
+</form>
+
+<div class="centrado">
+  <h3 style="color: white;">LISTA DE CANDIDATOS</h3>
+  <hr>
+  <ul *ngFor="let candidato of candidatos" style="color: white;">
+    <li class="grid grid-pad">
+      ID: {{ candidato.Id }} - {{ candidato.Dni }} - {{ candidato.Nombre }} - {{ candidato.Titulo1 }} - {{ candidato.Titulo2 }} -
+      {{ candidato.Aptitud1 }} - {{ candidato.Aptitud2 }}
+    </li>
+  </ul>
+</div>

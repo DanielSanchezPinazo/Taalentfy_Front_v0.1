@@ -1,0 +1,18 @@
+
+<form>
+  <div class="row">
+    <div class="col" class="centrado">
+      <h3>LOGIN</h3>
+      <label for="dni">DNI :</label>
+      <input type="text" name="dni" id="dni" [(ngModel)]="formulario.dni">
+      <hr class="separadorB">
+      <label for="pass">PASS :</label>
+      <input type="text" name="pass" id="pass" [(ngModel)]="formulario.pass">
+      <hr class="separadorB">
+    </div>
+    <div class="col" class="centrado">
+      <button type="submit" (click)= "loggin()" >LOGIN</button>
+    </div>
+    <hr class="separadorF">
+  </div>
+</form>

@@ -1,0 +1,36 @@
+<form >
+    <div class="row">
+      <div class="col" class="centrado">
+        <h3>CREAR / EDITAR OFERTA</h3>
+        <label for="nombre">Nombre *:</label>
+        <input type="text" name="nombre" id="nombre" [(ngModel)]="formulario.Nombre">
+        <hr class="separadorB">
+        <label for="resumen">Resumen:</label>
+        <input type="text" name="resumen" id="resumen" [(ngModel)]="formulario.Resumen">
+        <hr class="separadorB">
+        <label for="ofertador">Id de empresa *:</label>
+        <input type="text" name="ofertador" id="ofertador" [(ngModel)]="formulario.Ofertador">
+        <hr class="separadorB">
+        Obligatorio sólo si quieres modificar/borrar una oferta
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id" [(ngModel)]="id">
+      </div>
+      <div class="col" class="centrado">
+        <button (click)="nuevaOferta()">NUEVA</button>
+        <button (click)="editOferta()">EDITAR</button>
+        <button (click)="borrarOferta()">BORRAR</button>
+      </div>
+      <hr class="separadorF">
+    </div>
+  </form>
+  
+  <div class="centrado">
+    <h3 style="color: white;">LISTA DE OFERTAS</h3>
+    <hr>
+    <ul *ngFor="let oferta of ofertas" style="color: white;">
+      <li class="grid grid-pad">
+        ID: {{ oferta.Id }} - {{ oferta.Nombre }} - {{ oferta.Resumen }} - ID ofertador: {{ oferta.Ofertador }}
+      </li>
+    </ul>
+  </div>
+  

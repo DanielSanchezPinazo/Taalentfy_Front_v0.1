@@ -1,0 +1,36 @@
+<form >
+    <div class="row">
+      <div class="col" class="centrado">
+        <h3>CREAR / EDITAR CANDIDATURA</h3>
+        <label for="estado">Estado:</label>
+        <input type="text" name="estado" id="estado" [(ngModel)]="formulario.Estado">
+        <hr class="separadorB">
+        <label for="candidato">Candidato *:</label>
+        <input type="text" name="candidato" id="candidato" [(ngModel)]="formulario.Candidato">
+        <hr class="separadorB">
+        <label for="oferta">Oferta *:</label>
+        <input type="text" name="oferta" id="oferta" [(ngModel)]="formulario.Oferta">
+        <hr class="separadorB">
+        Obligatorio sólo si quieres modificar/borrar un candidatura
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id" [(ngModel)]="id">
+      </div>
+      <div class="col" class="centrado">
+        <button (click)="nuevaCandidatura()">NUEVA</button>
+        <button (click)="editCandidatura()">EDITAR</button>
+        <button (click)="borrarCandidatura()">BORRAR</button>
+      </div>
+      <hr class="separadorF">
+    </div>
+  </form>
+  
+  <div class="centrado">
+    <h3 style="color: white;">LISTA DE CANDIDATURAS</h3>
+    <hr>
+    <ul *ngFor="let candidatura of candidaturas" style="color: white;">
+      <li class="grid grid-pad">
+        ID: {{ candidatura.Id }} - {{ candidatura.Estado }} - ID candidato: {{ candidatura.Candidato }} - ID ofertador: {{ candidatura.Oferta }}
+      </li>
+    </ul>
+  </div>
+  
