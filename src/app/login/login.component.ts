@@ -30,7 +30,7 @@ export class LoginComponent {
   muestraAdmins(): void {
     this.adminService.getAdmin().subscribe(respuesta => {
       this.admins = respuesta;
-      console.log(this.admins);
+      //console.log(this.admins);
     })
   }
 
@@ -43,11 +43,8 @@ export class LoginComponent {
     if (user) {
 
       this.adminService.setUser(user);
-      this.router.navigateByUrl('shared');
-      //console.log(user);
-    } else {
-
-      //console.log("no ");
+      //this.router.navigateByUrl('shared');
+      this.router.navigateByUrl('candidato');
       //console.log(user);
     }
   }

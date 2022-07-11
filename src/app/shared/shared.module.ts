@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { SharedBarComponent } from "./sharedbar/sharedBar.component";
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import { SharedBarComponent } from "./sharedbar/sharedBar.component";
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     SharedBarComponent

@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
+
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sharedBar',
-  templateUrl: './sharedBar.component.html'
+  templateUrl: './sharedBar.component.html',
+  styles: [
+    `
+      li {
+        cursor: pointer;
+      }
+    `
+  ]
 })
 export class SharedBarComponent {
 
-  ruta = '';
+/*   ruta = '';
   
   constructor(private router: Router) { }
 
@@ -42,5 +50,5 @@ export class SharedBarComponent {
 
       this.router.navigateByUrl('admin');
     }
-  } 
+  }  */
 }

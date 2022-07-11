@@ -1,4 +1,14 @@
+<!-- <app-login> -->
+  <div class="row" container mt-4><!-- <div class="row" container mt-4 *ngIf="usuarioLogueado"> -->
+  <div class="col-3">
+    <app-sharedBar> <!-- *ngIf="usuarioLogueado"> --></app-sharedBar>
+  </div>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<!-- </app-login> -->
 
-<app-sharedBar *ngIf="logged()"></app-sharedBar>
+<!-- <app-sharedBar *ngIf="logged()"></app-sharedBar>
 
-<router-outlet></router-outlet> 
+<router-outlet></router-outlet>  -->

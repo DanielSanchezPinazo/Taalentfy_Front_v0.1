@@ -32,7 +32,7 @@ export class AdminComponent implements OnInit {
     this.adminService.getAdmin().subscribe(respuesta => {
 
       this.admins = respuesta;
-      console.log(this.admins);
+      //console.log(this.admins);
     })
   }
 

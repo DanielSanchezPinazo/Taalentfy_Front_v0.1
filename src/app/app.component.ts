@@ -17,7 +17,8 @@ export class AppComponent {
     console.log(this.usuarioLogueado);
    }
 
-   logged() {
+/*    logged(): boolean {
     return this.usuarioLogueado;
-   }
+   } */
+
 }

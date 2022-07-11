@@ -4,6 +4,9 @@ body {
     height: 100%;
     background-color: #535151;
     color: white;
+    max-width: 1200px;
+    margin-top: 0px;
+    padding: 0px;
 }
 
 label {
@@ -29,7 +32,9 @@ select {
 #sidebar {
 
     text-align: center;
-    min-width: 180px;
+    min-width: 150px;
+    min-height: 609px;
+    margin: 0px;
 }
 
 .centrado {
@@ -48,6 +53,10 @@ select {
   margin-top: 10px;
   margin-bottom: 15px;
   color: white;
+}
+
+.mt {
+  margin-top: 20px;
 }
 
 button {

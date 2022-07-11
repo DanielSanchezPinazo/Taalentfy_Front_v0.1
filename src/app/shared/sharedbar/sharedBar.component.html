@@ -2,14 +2,25 @@
   <div class="bg-dark" id="sidebar">
     <h1 class="text-light">Taalentfy</h1>
     <nav>
-      <select name="elementos" id="elementos" (change)="enrut()" [(ngModel)]="ruta">
+
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action" routerLink="candidato" routerLinkActive="active">Candidato</li>
+        <li class="list-group-item list-group-item-action" routerLink="empresa" routerLinkActive="active">Empresa</li>
+        <li class="list-group-item list-group-item-action" routerLink="oferta" routerLinkActive="active">Oferta</li>
+        <li class="list-group-item list-group-item-action" routerLink="candidatura" routerLinkActive="active">Candidatura</li>
+        <li class="list-group-item list-group-item-action" routerLink="admin" routerLinkActive="active">Administradores</li>
+        <li class="list-group-item list-group-item-action" routerLink="logout" routerLinkActive="active">Logout</li>
+      </ul>
+
+<!-- class="animate__animated animate__fadeIn" -->
+
+<!--       <select name="elementos" id="elementos" (change)="enrut()" [(ngModel)]="ruta">
         <option value="candidato">Candidato</option>
         <option value="empresa">Empresa</option>
         <option value="oferta">Oferta</option>
         <option value="candidatura">Candidatura</option>
         <option value="admin">Administradores</option>
-      </select>
+      </select> -->
     </nav>
   </div>
-  <hr class="text-white" style="margin-top: 0px;"/>
 </form>

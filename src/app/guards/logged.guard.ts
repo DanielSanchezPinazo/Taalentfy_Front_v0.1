@@ -17,8 +17,7 @@ export class LoggedGuard implements CanActivate {
     this.adminService.getUser().subscribe(user => {
 
       if (user.Id) {
- 
-        //console.log(user);
+
         this.userLogged = true;
       
       } else { 
@@ -32,7 +31,6 @@ export class LoggedGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
 
-      console.log(this.userLogged);
       return this.userLogged;
   }
 }
